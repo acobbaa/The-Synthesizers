@@ -10,9 +10,22 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 93.0, 828.0, 901.0 ],
+		"rect" : [ 34.0, 63.0, 828.0, 931.0 ],
 		"gridsize" : [ 15.0, 15.0 ],
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"linecount" : 18,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 746.0, 94.0, 362.0, 261.0 ],
+					"text" : "INSERT THIS CODE IN ARDUINO\n\nint val[8]; //array 8 sensors total\n\nvoid setup() {\n  Serial.begin(9600); //serial communication set-up\n}\n\nvoid loop() {\n// read analog inputs one by one and send them to maxMSP\nfor(int i = 0; i < 8; i++) {\n  val[i] = analogRead(i);\n  Serial.print(val[i]);\n  Serial.print(\" \");\n}\nSerial.println();\ndelay(10);\n}\n",
+					"textcolor" : [ 0.850980392156863, 0.850980392156863, 0.850980392156863, 1.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-182",
 					"maxclass" : "gain~",
@@ -916,7 +929,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1881.333389401435852, 1193.333368897438049, 67.0, 22.0 ],
+					"patching_rect" : [ 1876.0, 1188.00002646446228, 67.0, 22.0 ],
 					"text" : "s~ bubbles"
 				}
 
@@ -927,7 +940,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 808.000024080276489, 1980.000059008598328, 51.0, 22.0 ],
+					"patching_rect" : [ 808.000024080276489, 1794.0, 51.0, 22.0 ],
 					"text" : "s~ pads"
 				}
 
@@ -939,7 +952,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 1793.333386778831482, 1156.00003445148468, 40.0, 22.0 ],
+					"patching_rect" : [ 1788.0, 1151.00002646446228, 40.0, 22.0 ],
 					"text" : "*~ 0.2"
 				}
 
@@ -951,7 +964,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 1793.333386778831482, 1201.333369135856628, 80.0, 13.0 ]
+					"patching_rect" : [ 1788.0, 1196.00002646446228, 80.0, 13.0 ]
 				}
 
 			}
@@ -973,7 +986,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 336.0, 1735.0, 80.0, 13.0 ]
+					"patching_rect" : [ 334.0, 1726.0, 80.0, 13.0 ]
 				}
 
 			}
@@ -1239,7 +1252,7 @@
 					"patching_rect" : [ 940.000028014183044, 1488.0, 256.0, 128.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 538.974423289299011, 210.128270030021667, 221.794899821281433, 90.820475459098816 ],
-					"setfilter" : [ 0, 8, 1, 0, 0, 970.0, 1.0, 1.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+					"setfilter" : [ 0, 8, 1, 0, 0, 1024.0, 1.0, 1.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 				}
 
 			}
@@ -1951,7 +1964,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 1793.333386778831482, 1120.000033378601074, 29.5, 22.0 ],
+					"patching_rect" : [ 1788.0, 1115.00002646446228, 29.5, 22.0 ],
 					"text" : "+~"
 				}
 
@@ -1963,7 +1976,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1661.333382844924927, 786.666690111160278, 51.0, 22.0 ],
+					"patching_rect" : [ 1656.0, 781.00002646446228, 51.0, 22.0 ],
 					"text" : "r piezo1"
 				}
 
@@ -1986,7 +1999,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 1661.333382844924927, 828.000024676322937, 39.0, 22.0 ],
+					"patching_rect" : [ 1656.0, 823.00002646446228, 39.0, 22.0 ],
 					"text" : "/ 1.01"
 				}
 
@@ -2779,7 +2792,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 2026.666727066040039, 1008.000030040740967, 55.0, 22.0 ],
+					"patching_rect" : [ 2021.0, 1003.00002646446228, 55.0, 22.0 ],
 					"text" : "p bubble"
 				}
 
@@ -2791,7 +2804,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 1605.333381175994873, 712.00002121925354, 58.0, 22.0 ],
+					"patching_rect" : [ 1600.0, 707.00002646446228, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -2809,7 +2822,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "float" ],
-					"patching_rect" : [ 1722.666718006134033, 840.000025033950806, 56.0, 23.0 ],
+					"patching_rect" : [ 1717.0, 835.00002646446228, 56.0, 23.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 853.077027082443237, 210.128270030021667, 56.0, 23.0 ],
 					"sig" : 0.0
@@ -2823,7 +2836,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 1722.666718006134033, 761.333356022834778, 43.0, 22.0 ],
+					"patching_rect" : [ 1717.0, 756.00002646446228, 43.0, 22.0 ],
 					"text" : "cycle~"
 				}
 
@@ -2835,7 +2848,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 1722.666718006134033, 800.00002384185791, 40.0, 22.0 ],
+					"patching_rect" : [ 1717.0, 795.00002646446228, 40.0, 22.0 ],
 					"text" : "rand~"
 				}
 
@@ -2852,7 +2865,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1661.333382844924927, 869.333359241485596, 50.0, 22.0 ]
+					"patching_rect" : [ 1656.0, 864.00002646446228, 50.0, 22.0 ]
 				}
 
 			}
@@ -2869,7 +2882,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1720.000051259994507, 874.666692733764648, 50.0, 22.0 ]
+					"patching_rect" : [ 1714.0, 869.00002646446228, 50.0, 22.0 ]
 				}
 
 			}
@@ -2882,7 +2895,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1786.666719913482666, 874.666692733764648, 162.0, 60.0 ],
+					"patching_rect" : [ 1781.0, 869.00002646446228, 162.0, 60.0 ],
 					"text" : "maximum bubble size\n(0.0 - 1.0)\nlarger numbers produce interesting results"
 				}
 
@@ -2895,7 +2908,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1626.666715145111084, 761.333356022834778, 150.0, 20.0 ],
+					"patching_rect" : [ 1621.0, 756.00002646446228, 150.0, 20.0 ],
 					"text" : "probability 0-100"
 				}
 
@@ -3669,7 +3682,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 1920.000057220458984, 1008.000030040740967, 55.0, 22.0 ],
+					"patching_rect" : [ 1914.0, 1003.00002646446228, 55.0, 22.0 ],
 					"text" : "p bubble"
 				}
 
@@ -4443,7 +4456,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 1817.333387494087219, 1008.000030040740967, 61.0, 22.0 ],
+					"patching_rect" : [ 1812.0, 1003.00002646446228, 61.0, 22.0 ],
 					"text" : "p bubbles"
 				}
 
@@ -5217,7 +5230,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 1709.333384275436401, 1008.000030040740967, 61.0, 22.0 ],
+					"patching_rect" : [ 1704.0, 1003.00002646446228, 61.0, 22.0 ],
 					"text" : "p bubbles"
 				}
 
@@ -5231,7 +5244,7 @@
 					"numinlets" : 5,
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 1605.333381175994873, 948.000028252601624, 440.0, 22.0 ],
+					"patching_rect" : [ 1600.0, 943.00002646446228, 440.0, 22.0 ],
 					"text" : "route 0 1 2 3"
 				}
 
@@ -6014,7 +6027,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 1605.333381175994873, 1008.000030040740967, 61.0, 22.0 ],
+					"patching_rect" : [ 1600.0, 1003.00002646446228, 61.0, 22.0 ],
 					"text" : "p bubbles"
 				}
 
@@ -6334,7 +6347,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 1605.333381175994873, 905.333360314369202, 133.0, 22.0 ],
+					"patching_rect" : [ 1600.0, 900.00002646446228, 133.0, 22.0 ],
 					"text" : "p bubble-source-timing"
 				}
 
@@ -6627,7 +6640,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1768.000052690505981, 649.33335268497467, 150.0, 60.0 ],
+					"patching_rect" : [ 1762.0, 644.00002646446228, 150.0, 60.0 ],
 					"text" : "Here, the piezo sensors dictates the probability of bubbles occuring/ density and the size"
 				}
 
@@ -7272,7 +7285,7 @@
 					"patching_rect" : [ 324.0, 1488.0, 256.0, 128.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 523.974423289299011, 195.128270030021667, 221.794899821281433, 90.820475459098816 ],
-					"setfilter" : [ 0, 1, 1, 0, 0, 186.0, 1.0, 1.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+					"setfilter" : [ 0, 1, 1, 0, 0, 225.0, 1.0, 1.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 				}
 
 			}
@@ -7418,7 +7431,7 @@
 					"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 3559.0, 881.5625, 256.0, 128.0 ],
-					"setfilter" : [ 0, 1, 1, 0, 0, 180.0, 1.0, 0.659425735473633, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+					"setfilter" : [ 0, 1, 1, 0, 0, 160.0, 1.0, 0.659425735473633, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
 				}
 
 			}
@@ -7444,7 +7457,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1601.333381056785583, 646.666685938835144, 159.0, 24.0 ],
+					"patching_rect" : [ 1596.0, 641.00002646446228, 159.0, 24.0 ],
 					"text" : "BUBBLES",
 					"textcolor" : [ 0.831372549019608, 0.768627450980392, 0.584313725490196, 1.0 ]
 				}
@@ -9917,6 +9930,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-671", 1 ],
+					"midpoints" : [ 949.500028014183044, 1739.071236312389374, 828.000024080276489, 1739.071236312389374 ],
 					"order" : 2,
 					"source" : [ "obj-668", 0 ]
 				}
@@ -10119,7 +10133,7 @@
 			}
  ],
 		"clearcolor" : [ 0.0, 0.0, 0.0, 0.0 ],
-		"syntax_attributecolor" : [ 0.576470588235294, 1.0, 0.686274509803922, 1.0 ],
+		"syntax_attributecolor" : [ 0.184313725490196, 0.890196078431372, 0.368627450980392, 1.0 ],
 		"oscreceiveudpport" : 0
 	}
 
